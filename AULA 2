@@ -1,0 +1,120 @@
+Herança é pra baixo, polimorfismo é para cima;
+
+Um objeto com classe funcionario, acumula bonus em uma variavel, aonde no final vamos consultar esse bonus;
+Funcionario nesse caso é o tipo base, gerente é o tipo especializado.
+Esses tipos precisam ser processados pelo mesmo metodo.
+
+Diferença de classe concreta 
+Classe concreta, vc cria e constrói.
+
+CLasse abstrata:
+  Não permite construção.
+
+Existem métodos concretos e abstratos.
+
+Classe abstrata serve para iniciar as assinaturas.
+
+Dá pra instanciar a assinatura, para a classe herdeira.
+ou seja, da classe abstrata para a concreta.
+
+MÉTODOS ABSTRATOS
+
+
+funcionario:
+package aula01;
+ 
+// protected é um atributo que só pode ser acessivel por uma classe que extende de tal
+public class funcionario {
+    protected String nome;
+    protected String cpf;
+    protected Double salario;
+    protected String senha;
+
+    public abstract Double getBonificacao();
+        // this garante e força que o atributo salário do apartment threading 
+        // da classe Funcionario seja usado (instancia do funcionario sendo usada em tempo de cpu)
+      //  return this.salario * 0.15; // 15% como padrão de bonificação
+    //}
+
+    public boolean autentica(String senha){
+        return this.senha.equals(senha);
+    }
+}
+
+
+package aula01;
+
+public class finance {
+    private double total_bonus = 0.0;
+
+    public void calc_bonus(funcionario funcionario){
+        this.total_bonus += funcionario.getBonificacao();
+    }
+
+    
+
+    public double getTotal_bonus(){
+        return this.total_bonus;
+    }
+}
+
+
+package aula01;
+
+public class operador extends funcionario{
+    
+}
+
+
+package aula01;
+
+
+public class gerente extends funcionario {
+    public int num; //numero de funcionarios gerenciados
+
+    @Override
+    public Double getBonificacao(){
+        double bonus_base = super.getBonificacao();
+        double bonus_add = 0.2 * this.num;
+        return bonus_add;
+        //return this.salario * (0.2 * this.num);
+    }
+}
+
+
+
+
+package aula01;
+
+public class programa {
+    public static void main(String[] args) {
+        finance fin = new finance();
+        gerente coord = new gerente();
+
+        coord.nome = "Irvando";
+        coord.salario = (double) 10000;
+        coord.num = 2;
+        //System.out.println(coord.getBonificacao());
+        
+        operador porteiro = new operador();
+        porteiro.nome = "Jucelino";
+        porteiro.salario = (double) 1500;
+
+        gerente coord1 = new gerente();
+        fin.calc_bonus(coord);
+        fin.calc_bonus(coord1);
+        fin.calc_bonus(porteiro);
+
+        funcionario func = new gerente();
+        func.nome = "Igor";
+        func.salario = (double) 20000;
+        
+
+            
+
+        System.out.println(func.getTotal_bonus());
+        
+    }  
+}
+
+
