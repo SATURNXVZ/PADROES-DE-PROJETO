@@ -1,0 +1,16 @@
+Exercício 1.1 - Produto
+Crie uma classe Produto com:
+
+Atributos: nome (String), preco (double), quantidadeEstoque (int)
+
+Construtor que recebe todos os atributos
+
+Métodos:
+
+vender(int quantidade) - reduz estoque, lança exceção se não tiver estoque
+
+reporEstoque(int quantidade) - aumenta estoque
+
+exibirInfo() - mostra todos os dados formatados
+
+Teste: Crie 2 produtos, venda alguns, reponha e mostre o status.
