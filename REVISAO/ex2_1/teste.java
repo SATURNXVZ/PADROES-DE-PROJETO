@@ -12,6 +12,7 @@ public class teste {
         funcionarios.add(new desenvolvedor("Vitor", 6000, 3));
         funcionarios.add(new desenvolvedor("Luiz", 7500, 6));
 
+
         for (funcionario f : funcionarios){
             f.print();
         }

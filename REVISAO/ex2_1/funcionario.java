@@ -15,6 +15,6 @@ public class funcionario {
     }
 
     public void print(){
-        System.out.printf("Funcionario: %s | Salário: R$%.2f%n", name, baseWage);
+        System.out.printf("Funcionario: %s | Salário: R$%.2f%n", name, calcWage());
     }
 }
