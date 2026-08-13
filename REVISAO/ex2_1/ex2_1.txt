@@ -1,0 +1,20 @@
+NÍVEL 2 - HERANÇA E POLIMORFISMO
+Exercício 2.1 - Funcionários
+Crie a classe base Funcionario com:
+
+Atributos: nome, salarioBase
+
+Método: calcularSalario() (retorna salário base)
+
+Crie as subclasses:
+
+Gerente: adicional de 20% sobre salário base
+
+Desenvolvedor: adicional de 15% + bônus de R$ 500 se tiver mais de 3 anos de empresa
+
+Estagiario: salário é 60% do salário base
+
+Todos devem sobrescrever calcularSalario().
+
+Teste: Crie um array de funcionários com tipos diferentes, percorra e exiba o salário de cada um (polimorfismo).
+
