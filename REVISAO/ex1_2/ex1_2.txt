@@ -1,0 +1,10 @@
+Exercício 1.2 - Calculadora Simples
+Crie uma classe Calculadora com:
+
+Atributo: ultimoResultado (double)
+
+Métodos estáticos: somar(), subtrair(), multiplicar(), dividir()
+
+Método não-estático: mostrarUltimoResultado()
+
+Teste: Use métodos estáticos para fazer contas e depois mostre o último resultado guardado.
