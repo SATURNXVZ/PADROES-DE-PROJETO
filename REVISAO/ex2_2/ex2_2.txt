@@ -1,0 +1,16 @@
+Exercício 2.2 - Formas Geométricas
+Crie a classe abstrata Forma com:
+
+Método abstrato: calcularArea()
+
+Método concreto: exibirTipo() (mostra o nome da classe)
+
+Subclasses:
+
+Retangulo: base e altura
+
+Circulo: raio (use PI = 3.14159)
+
+Triangulo: base e altura
+
+Teste: Crie uma lista de formas, calcule a área de cada uma usando polimorfismo.
