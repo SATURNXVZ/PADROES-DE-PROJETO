@@ -1,1 +1,20 @@
+FACTORY
+
+Primeira extensão do open/close
+
+Software precisa funcionar primeiro, depois vem o design;
+
+A primeira coisa ruim num código, quanto mais IF, pior;
+Exercicio UNILE foi um exemplo disso, mas somente a ponta do open/close
+
+QUAL A DIFERENÇA ENTRE CLASSE ABSTRATA E INTERFACE?
+Manter isso em mente.
+
+OPEN: Abre e expande, encaixando qualquer coisa, talvez usando abstract?
+CLOSE: Fechado para extensão.
+
+Ex: tem um braço de robo, e na ponta tem uma acoplagem para receber alguma ferramenta.
+O 
+
+
 
