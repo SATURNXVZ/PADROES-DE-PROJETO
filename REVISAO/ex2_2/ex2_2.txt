@@ -5,7 +5,7 @@ Método abstrato: calcularArea()
 
 Método concreto: exibirTipo() (mostra o nome da classe)
 
-Subclasses:
+Subclasses: 
 
 Retangulo: base e altura
 

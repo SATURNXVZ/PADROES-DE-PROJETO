@@ -6,7 +6,7 @@ public class circulo extends forma {
 
     public circulo(String name, double raio){
         super(name, 0, 0);
-        this.raio = raio;
+        this.raio  = raio;
     }
 
     @Override

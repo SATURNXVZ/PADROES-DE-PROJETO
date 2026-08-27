@@ -6,7 +6,7 @@ public class forma {
     public double height;
 
     private double result;
-
+ 
     public forma(String name, double base, double height){
         this.name = name;
         this.base = base;
