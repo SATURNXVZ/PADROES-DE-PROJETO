@@ -7,4 +7,4 @@ public class retangulo extends forma{
     }
 
     
-} 
+}  

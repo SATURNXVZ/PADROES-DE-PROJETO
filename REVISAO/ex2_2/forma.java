@@ -11,10 +11,10 @@ public class forma {
         this.name = name;
         this.base = base;
         this.height = height;
-    }
+    } 
 
     public void print(){
-        System.out.printf("Forma: %s", name);
+        System.out.printf("Forma: %s \n\n", name);
     }
 
     public void calcArea(){

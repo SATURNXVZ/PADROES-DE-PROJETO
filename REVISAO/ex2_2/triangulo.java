@@ -6,11 +6,11 @@ public class triangulo extends forma{
     public triangulo(String name, double base, double height){
         super(name, base, height);
     }
-   
+    
     @Override
     public void calcArea(){
         result = (base * height) /2;
-        System.out.printf("Area do %s é: %f ", name, result); 
+        System.out.printf("Area do %s é: %f \n\n", name, result); 
     }
 
 }

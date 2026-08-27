@@ -8,10 +8,10 @@ public class circulo extends forma {
         super(name, 0, 0);
         this.raio  = raio;
     }
-
+ 
     @Override
     public void calcArea() {
         double result = PI * raio * raio;
-        System.out.printf("Area do %s é: %f ", name, result); 
+        System.out.printf("Area do %s é: %f \n\n", name, result); 
     }
 }
