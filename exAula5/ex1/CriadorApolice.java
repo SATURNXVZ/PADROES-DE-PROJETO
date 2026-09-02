@@ -5,7 +5,7 @@ public abstract class CriadorApolice{
     public final String processarContratacao() {
         Apolice apolice = criarApolice();
         apolice.processar();
-        return apolice.gerarResumo();
+        return apolice.resumo();
     }
 
     

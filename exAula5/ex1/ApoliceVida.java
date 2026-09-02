@@ -7,7 +7,7 @@ public class ApoliceVida extends Apolice {
     private int idade;
     private double capitalSegurado; //valor do seguro
     private boolean fumante; //se eh fumante (true/false)
-    private boolean atestado //se tem atestado
+    private boolean atestado; //se tem atestado
 
     public ApoliceVida(String segurado, int idade, double capitalSegurado, boolean fumante, boolean atestado) {
         super(segurado);
