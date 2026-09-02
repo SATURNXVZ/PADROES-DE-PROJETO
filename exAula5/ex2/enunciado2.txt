@@ -1,0 +1,50 @@
+Exercício 2 : Checkout Internacional de Marketplace
+Nível de dificuldade: moderado.
+Contexto de negócio
+Um marketplace brasileiro está expandindo suas operações para os Estados Unidos e para a
+Alemanha. Ao finalizar um pedido, o sistema de checkout precisa gerar três artefatos: o documento
+fiscal, o processamento do pagamento e a etiqueta de envio. Após um incidente registrado durante
+o piloto da expansão, a equipe de compliance impôs uma exigência explícita: os três artefatos de um
+mesmo pedido precisam pertencer sempre ao mesmo país de destino, porque a combinação de
+formatos de países diferentes (por exemplo, uma nota fiscal eletrônica brasileira associada a uma
+etiqueta de envio americana) gerou rejeição alfandegária e retrabalho manual da operação.
+Especificação funcional
+• RF01 (Brasil) : o documento fiscal é uma nota fiscal eletrônica, com CFOP 5.102 para operações
+dentro do estado e 6.102 para operações interestaduais, ICMS de 18% (ou 12% em operações
+interestaduais) e chave de acesso simulada de 44 dígitos. O pagamento é processado via Pix,
+com desconto de 5%, ou via boleto, com compensação em 3 dias úteis. A etiqueta de envio é
+gerada pelos Correios, com CEP no formato 00000-000.
+• RF02 (Estados Unidos) : o documento fiscal é uma sales invoice, com sales tax calculada
+conforme o estado de destino (California 7,25%, Texas 6,25%, Oregon isento) e identificação do
+vendedor por EIN. O pagamento é processado por cartão de crédito, com verificação AVS. A
+etiqueta de envio é gerada pela USPS, no formato ZIP+4.
+• RF03 (Alemanha): o documento fiscal é uma VAT invoice, com Umsatzsteuer de 19% (ou 7%
+para produtos essenciais) e VAT-ID do vendedor. O pagamento é processado por SEPA Direct
+Debit. A etiqueta de envio é gerada pela Deutsche Post, no formato PLZ de 5 dígitos.
+Requisitos não funcionais
+• RNF01: a adição de um novo país de operação não pode exigir alteração da lógica de checkout
+já existente, apenas a inclusão de novas classes.
+• RNF02: a classe responsável por finalizar o pedido não pode conter estruturas condicionais que
+decidam, país a país, qual documento fiscal, processador de pagamento ou etiqueta de envio
+utilizar; ela deve depender apenas de abstrações.
+• RNF03: o relatório final do pedido deve exibir os três artefatos gerados em um formato
+padronizado, independentemente do país de destino.
+Tarefa
+Projete e implemente uma solução orientada a objetos que satisfaça a especificação acima e que
+impeça, pela própria estrutura das classes, que artefatos de países diferentes sejam combinados em
+um mesmo pedido. Identifique, a partir dos requisitos, qual padrão de projeto da família GoF resolve
+esse problema e utilize-o na implementação.
+Entregáveis
+3. diagrama de classes UML completo da solução adotada, incluindo as interfaces de produto, as
+classes concretas por país e o componente responsável por selecioná-las;
+4. implementação Java completa e compilável, incluindo uma classe de teste (main) que finalize
+um pedido para cada um dos três países e imprima o relatório gerado.
+Critérios de avaliação
+• identificação do padrão de projeto adequado ao problema a partir da especificação, sem que o
+nome do padrão tenha sido informado no enunciado;
+• garantia estrutural de que os três artefatos de um pedido pertencem sempre ao mesmo país
+(nenhuma combinação inválida deve ser possível de se escrever no código cliente sem alterar a
+fábrica utilizada);
+• implementação fiel das regras de cálculo de RF01 a RF03;
+• facilidade de extensão para um quarto país, avaliada pela quantidade de classes existentes que
+precisariam ser alteradas.
