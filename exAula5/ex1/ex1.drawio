@@ -1,0 +1,214 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Factory Method - Apolices" id="apolicesFactory">
+    <mxGraphModel dx="2669" dy="1706" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n3" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=0;resizeParentMax=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;i&gt;Apolice&lt;/i&gt;" vertex="1">
+          <mxGeometry height="314" width="320" x="620" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="n3" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;html=1;" value="" vertex="1">
+          <mxGeometry height="8" width="320" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="n3" style="text;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;portConstraint=eastwest;fontSize=11;" value="# numeroApolice: String&lt;br&gt;# segurado: String&lt;br&gt;# dataEmissao: String&lt;br&gt;# premioMensal: double&lt;br&gt;# contratacaoValida: boolean&lt;br&gt;# mensagemValidacao: String&lt;br&gt;- contador: int {static}" vertex="1">
+          <mxGeometry height="134" width="320" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="n3" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;html=1;" value="" vertex="1">
+          <mxGeometry height="8" width="320" y="172" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" parent="n3" style="text;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;portConstraint=eastwest;fontSize=11;" value="+ Apolice(segurado: String)&lt;br&gt;+ calcularPremio(): double {abstract}&lt;br&gt;+ validarCobertura(): boolean {abstract}&lt;br&gt;+ listarDocumentos(): List&lt;String&gt; {abstract}&lt;br&gt;+ getPrefixo(): String {abstract}&lt;br&gt;+ processar(): void&lt;br&gt;+ resumo(): String" vertex="1">
+          <mxGeometry height="134" width="320" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="n8" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=0;resizeParentMax=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="ApoliceAuto" vertex="1">
+          <mxGeometry height="224" width="340" x="40" y="454" as="geometry" />
+        </mxCell>
+        <mxCell id="n9" parent="n8" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;html=1;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="n10" parent="n8" style="text;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;portConstraint=eastwest;fontSize=11;" value="- FIPE: double&lt;br&gt;- idadeCondutor: int&lt;br&gt;- tempoHabilitacao: int&lt;br&gt;- coberturaTerceiros: double" vertex="1">
+          <mxGeometry height="80" width="340" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="n11" parent="n8" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;html=1;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="n12" parent="n8" style="text;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;portConstraint=eastwest;fontSize=11;" value="+ ApoliceAuto(segurado, FIPE, idadeCondutor,   tempoHabilitacao, coberturaTerceiros)&lt;br&gt;+ calcularPremio(): double&lt;br&gt;+ validarCobertura(): boolean&lt;br&gt;+ listarDocumentos(): List&lt;String&gt;&lt;br&gt;+ getPrefixo(): String" vertex="1">
+          <mxGeometry height="98" width="340" y="126" as="geometry" />
+        </mxCell>
+        <mxCell id="n13" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=0;resizeParentMax=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="ApoliceResidencial" vertex="1">
+          <mxGeometry height="206" width="340" x="420" y="454" as="geometry" />
+        </mxCell>
+        <mxCell id="n14" parent="n13" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;html=1;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="n15" parent="n13" style="text;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;portConstraint=eastwest;fontSize=11;" value="- valorImovel: double&lt;br&gt;- altoPadrao: boolean&lt;br&gt;- temDocumento: boolean" vertex="1">
+          <mxGeometry height="62" width="340" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="n16" parent="n13" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;html=1;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="n17" parent="n13" style="text;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;portConstraint=eastwest;fontSize=11;" value="+ ApoliceResidencial(segurado, valorImovel,   altoPadrao, temDocumento)&lt;br&gt;+ calcularPremio(): double&lt;br&gt;+ validarCobertura(): boolean&lt;br&gt;+ listarDocumentos(): List&lt;String&gt;&lt;br&gt;+ getPrefixo(): String" vertex="1">
+          <mxGeometry height="98" width="340" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="n18" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=0;resizeParentMax=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="ApoliceVida" vertex="1">
+          <mxGeometry height="224" width="340" x="800" y="454" as="geometry" />
+        </mxCell>
+        <mxCell id="n19" parent="n18" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;html=1;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="n20" parent="n18" style="text;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;portConstraint=eastwest;fontSize=11;" value="- idade: int&lt;br&gt;- capitalSegurado: double&lt;br&gt;- fumante: boolean&lt;br&gt;- atestado: boolean" vertex="1">
+          <mxGeometry height="80" width="340" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="n21" parent="n18" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;html=1;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="n22" parent="n18" style="text;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;portConstraint=eastwest;fontSize=11;" value="+ ApoliceVida(segurado, idade, capitalSegurado,   fumante, atestado)&lt;br&gt;+ calcularPremio(): double&lt;br&gt;+ validarCobertura(): boolean&lt;br&gt;+ listarDocumentos(): List&lt;String&gt;&lt;br&gt;+ getPrefixo(): String" vertex="1">
+          <mxGeometry height="98" width="340" y="126" as="geometry" />
+        </mxCell>
+        <mxCell id="n23" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=0;resizeParentMax=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="ApoliceViagem" vertex="1">
+          <mxGeometry height="224" width="340" x="1180" y="454" as="geometry" />
+        </mxCell>
+        <mxCell id="n24" parent="n23" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;html=1;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="n25" parent="n23" style="text;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;portConstraint=eastwest;fontSize=11;" value="- diasViagem: int&lt;br&gt;- internacional: boolean&lt;br&gt;- cobertura: double&lt;br&gt;- passaporte: boolean" vertex="1">
+          <mxGeometry height="80" width="340" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="n26" parent="n23" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;html=1;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="n27" parent="n23" style="text;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;portConstraint=eastwest;fontSize=11;" value="+ ApoliceViagem(segurado, diasViagem,   internacional, cobertura, passaporte)&lt;br&gt;+ calcularPremio(): double&lt;br&gt;+ validarCobertura(): boolean&lt;br&gt;+ listarDocumentos(): List&lt;String&gt;&lt;br&gt;+ getPrefixo(): String" vertex="1">
+          <mxGeometry height="98" width="340" y="126" as="geometry" />
+        </mxCell>
+        <mxCell id="n28" edge="1" parent="1" source="n8" style="endArrow=block;endFill=0;endSize=18;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeWidth=1;" target="n3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n29" edge="1" parent="1" source="n13" style="endArrow=block;endFill=0;endSize=18;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeWidth=1;" target="n3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n30" edge="1" parent="1" source="n18" style="endArrow=block;endFill=0;endSize=18;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeWidth=1;" target="n3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n31" edge="1" parent="1" source="n23" style="endArrow=block;endFill=0;endSize=18;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeWidth=1;" target="n3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n32" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=0;resizeParentMax=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;i&gt;CriadorApolice&lt;/i&gt;" vertex="1">
+          <mxGeometry height="102" width="320" x="620" y="818" as="geometry" />
+        </mxCell>
+        <mxCell id="n33" parent="n32" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;html=1;" value="" vertex="1">
+          <mxGeometry height="8" width="320" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="n34" parent="n32" style="text;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;portConstraint=eastwest;fontSize=11;" value=" " vertex="1">
+          <mxGeometry height="12" width="320" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="n35" parent="n32" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;html=1;" value="" vertex="1">
+          <mxGeometry height="8" width="320" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="n36" parent="n32" style="text;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;portConstraint=eastwest;fontSize=11;" value="+ criarApolice(): Apolice {abstract}&lt;br&gt;+ processarContratacao(): String {final}" vertex="1">
+          <mxGeometry height="44" width="320" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="n37" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=0;resizeParentMax=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="CriadorAuto" vertex="1">
+          <mxGeometry height="188" width="340" x="40" y="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="n38" parent="n37" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;html=1;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="n39" parent="n37" style="text;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;portConstraint=eastwest;fontSize=11;" value="- segurado: String&lt;br&gt;- FIPE: double&lt;br&gt;- idade: int&lt;br&gt;- tempoHabilitacao: int&lt;br&gt;- coberturaTerceiros: double" vertex="1">
+          <mxGeometry height="98" width="340" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="n40" parent="n37" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;html=1;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="136" as="geometry" />
+        </mxCell>
+        <mxCell id="n41" parent="n37" style="text;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;portConstraint=eastwest;fontSize=11;" value="+ CriadorAuto(segurado, FIPE, idade,   tempoHabilitacao, coberturaTerceiros)&lt;br&gt;+ criarApolice(): Apolice" vertex="1">
+          <mxGeometry height="44" width="340" y="144" as="geometry" />
+        </mxCell>
+        <mxCell id="n42" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=0;resizeParentMax=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="CriadorResidencial" vertex="1">
+          <mxGeometry height="170" width="340" x="420" y="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="n43" parent="n42" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;html=1;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="n44" parent="n42" style="text;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;portConstraint=eastwest;fontSize=11;" value="- segurado: String&lt;br&gt;- valorImovel: double&lt;br&gt;- altoPadrao: boolean&lt;br&gt;- documento: boolean" vertex="1">
+          <mxGeometry height="80" width="340" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="n45" parent="n42" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;html=1;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="n46" parent="n42" style="text;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;portConstraint=eastwest;fontSize=11;" value="+ CriadorResidencial(segurado, valorImovel,   altoPadrao, documento)&lt;br&gt;+ criarApolice(): Apolice" vertex="1">
+          <mxGeometry height="44" width="340" y="126" as="geometry" />
+        </mxCell>
+        <mxCell id="n47" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=0;resizeParentMax=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="CriadorVida" vertex="1">
+          <mxGeometry height="188" width="340" x="800" y="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="n48" parent="n47" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;html=1;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="n49" parent="n47" style="text;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;portConstraint=eastwest;fontSize=11;" value="- segurado: String&lt;br&gt;- idadeSegurado: int&lt;br&gt;- capitalSegurado: double&lt;br&gt;- fumante: boolean&lt;br&gt;- atestado: boolean" vertex="1">
+          <mxGeometry height="98" width="340" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="n50" parent="n47" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;html=1;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="136" as="geometry" />
+        </mxCell>
+        <mxCell id="n51" parent="n47" style="text;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;portConstraint=eastwest;fontSize=11;" value="+ CriadorVida(segurado, idadeSegurado,   capitalSegurado, fumante, atestado)&lt;br&gt;+ criarApolice(): Apolice" vertex="1">
+          <mxGeometry height="44" width="340" y="144" as="geometry" />
+        </mxCell>
+        <mxCell id="n52" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=0;resizeParentMax=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="CriadorViagem" vertex="1">
+          <mxGeometry height="188" width="340" x="1180" y="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="n53" parent="n52" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;html=1;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="n54" parent="n52" style="text;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;portConstraint=eastwest;fontSize=11;" value="- segurado: String&lt;br&gt;- diasViagem: int&lt;br&gt;- internacional: boolean&lt;br&gt;- cobertura: double&lt;br&gt;- passaporte: boolean" vertex="1">
+          <mxGeometry height="98" width="340" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="n55" parent="n52" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;html=1;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="136" as="geometry" />
+        </mxCell>
+        <mxCell id="n56" parent="n52" style="text;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;portConstraint=eastwest;fontSize=11;" value="+ CriadorViagem(segurado, diasViagem,   internacional, cobertura, passaporte)&lt;br&gt;+ criarApolice(): Apolice" vertex="1">
+          <mxGeometry height="44" width="340" y="144" as="geometry" />
+        </mxCell>
+        <mxCell id="n57" edge="1" parent="1" source="n37" style="endArrow=block;endFill=0;endSize=18;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeWidth=1;" target="n32" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n58" edge="1" parent="1" source="n42" style="endArrow=block;endFill=0;endSize=18;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeWidth=1;" target="n32" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n59" edge="1" parent="1" source="n47" style="endArrow=block;endFill=0;endSize=18;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeWidth=1;" target="n32" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n60" edge="1" parent="1" source="n52" style="endArrow=block;endFill=0;endSize=18;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeWidth=1;" target="n32" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n61" edge="1" parent="1" source="n37" style="endArrow=open;endFill=1;endSize=10;dashed=1;html=1;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeWidth=1;fontSize=10;" target="n8" value="«creates»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n62" edge="1" parent="1" source="n42" style="endArrow=open;endFill=1;endSize=10;dashed=1;html=1;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeWidth=1;fontSize=10;" target="n13" value="«creates»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n63" edge="1" parent="1" source="n47" style="endArrow=open;endFill=1;endSize=10;dashed=1;html=1;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeWidth=1;fontSize=10;" target="n18" value="«creates»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n64" edge="1" parent="1" source="n52" style="endArrow=open;endFill=1;endSize=10;dashed=1;html=1;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeWidth=1;fontSize=10;" target="n23" value="«creates»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n65" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=0;resizeParentMax=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="ClienteSeguradora" vertex="1">
+          <mxGeometry height="116" width="300" x="1560" y="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="n66" parent="n65" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;html=1;" value="" vertex="1">
+          <mxGeometry height="8" width="300" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="n67" parent="n65" style="text;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;portConstraint=eastwest;fontSize=11;" value="- criadores: Map&lt;String, CriadorApolice&gt;" vertex="1">
+          <mxGeometry height="26" width="300" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="n68" parent="n65" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;html=1;" value="" vertex="1">
+          <mxGeometry height="8" width="300" y="64" as="geometry" />
+        </mxCell>
+        <mxCell id="n69" parent="n65" style="text;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;portConstraint=eastwest;fontSize=11;" value="+ registrarCriadores(tipo: String,   criador: CriadorApolice): void&lt;br&gt;+ solicitarApolice(tipo: String): String" vertex="1">
+          <mxGeometry height="44" width="300" y="72" as="geometry" />
+        </mxCell>
+        <mxCell id="n70" edge="1" parent="1" source="n65" style="endArrow=none;startArrow=diamondThin;startFill=1;startSize=18;html=1;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=10;" target="n32" value="1        0..* criadores">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
