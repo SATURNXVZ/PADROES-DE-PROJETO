@@ -1,0 +1,14 @@
+Existem pequenas alterações de observer, como ele é pequeno, tem poucas variações.
+
+"Eu tenho um objeto que tenho observado, guardo o ESTADO dele"
+
+Quando o observado percebe que o estado mudou, ele avisa os observadores.
+
+Quando tal pessoa mudar a cor da blusa, os que estiverem inscritos verão que ele mudou.
+
+Ao terminar, eles precisam se conhecer, por meio de uma assinatura/contrato.
+
+Observer tem 2 assinaturas a seguir:
+A do Observado e a do Observador.
+
+Não existe observador sem ter observado (item que está sendo observado)
