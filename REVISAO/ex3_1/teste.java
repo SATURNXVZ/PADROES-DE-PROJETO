@@ -1,7 +1,7 @@
-    public class main {
+    public class teste {
         public static void main(String[] args) {
             FuncionarioCLT c1 = new FuncionarioCLT("Renato", 3000);
-            FuncionarioPJ p1 = new FuncionarioPJ("Daniel", 2300, 120);
+            FuncionarioPJ p1 = new FuncionarioPJ("Daniel", 100, 120);
             Freelancer f1 = new Freelancer("Roberto", 4500);
 
 

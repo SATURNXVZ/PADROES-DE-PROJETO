@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class FolhaPagamento {
@@ -7,7 +8,7 @@ public class FolhaPagamento {
     List<Pagavel> funcionarios;
 
     public FolhaPagamento() {
-        new FolhaPagamento();
+        funcionarios = new ArrayList<>();
     }
 
     public void adicionar(Pagavel funcionario){
