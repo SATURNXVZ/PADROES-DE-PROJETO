@@ -2,15 +2,20 @@ import java.util.List;
 
 public class FolhaPagamento {
 
+    double total = 0;
+
     List<Pagavel> funcionarios;
 
-    public FolhaPagamento(List<Pagavel> pagaveis){
-        funcionarios = pagaveis;
+    public FolhaPagamento() {
+        new FolhaPagamento();
+    }
+
+    public void adicionar(Pagavel funcionario){
+        funcionarios.add(funcionario);
     }
 
     public void gerarFolha(){
-        double total = 0;
-
+        
         for (Pagavel pagavel : funcionarios) {
             total += pagavel.calcSalario();
         }
