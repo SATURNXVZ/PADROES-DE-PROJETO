@@ -1,0 +1,19 @@
+🎯 NÍVEL 3 - INTERFACES E COMPOSIÇÃO
+📌 EXERCÍCIO 3.1 - SISTEMA DE PAGAMENTO
+Crie a interface Pagavel com método calcularPagamento().
+
+Implemente:
+
+FuncionarioCLT: salario mensal fixo
+
+FuncionarioPJ: valor por hora * horas trabalhadas
+
+Freelancer: valor por projeto
+
+Crie uma classe FolhaPagamento que:
+
+Recebe uma lista de Pagavel
+
+Tem método gerarFolha() que calcula e exibe o total a pagar
+
+Teste: Crie uma lista com diferentes tipos e gere a folha.
