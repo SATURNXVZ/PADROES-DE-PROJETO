@@ -1,12 +1,15 @@
 public class Freelancer implements Pagavel{
     String name;
-    double base;
-    double projeto;
+    double projeto; //valor do projeto
   
 
+    public Freelancer (String name, double projeto){
+        this.name = name;
+        this.projeto = projeto;
+    }
+
     @Override
-    public void calcSalario(){
-        double salario = base * projeto;
-        System.out.printf("Nome do funcionario %s\nSalario: %.2f", name, salario);
+    public double calcSalario(){
+        return projeto;
     }
 }

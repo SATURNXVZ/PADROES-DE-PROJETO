@@ -1,6 +1,6 @@
 public interface Pagavel{
     
-    void calcSalario();
+   public double calcSalario();
          
     
 }

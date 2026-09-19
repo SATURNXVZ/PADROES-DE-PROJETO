@@ -3,9 +3,10 @@ public class FuncionarioCLT implements Pagavel{
     public double base; //salario base 
  
     @Override
-    public void CalcSalario(){
+    public double calcSalario(){
         double salario = base;
         System.out.printf("Nome do funcionario: %s\n", name);
         System.out.printf("Salário: %.2f", salario);
+        return salario;
     }
 }

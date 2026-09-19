@@ -3,10 +3,12 @@ public class FuncionarioPJ implements Pagavel{
     Double base;
     Double horas; //horas trabalhadas
      
+
     @Override
-    public void CalcSalario(){
+    public double calcSalario(){
         double salario = base * horas;
         System.out.printf("Nome do Funcionario PJ: %s\n", name);
         System.out.printf("Salario: %.2f", salario);
+        return salario;
     }
 }
