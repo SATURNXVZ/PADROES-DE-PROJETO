@@ -1,0 +1,19 @@
+🎯 NÍVEL 4 - ENCAPSULAMENTO E BOAS PRÁTICAS
+📌 EXERCÍCIO 4.1 - CONTA BANCÁRIA
+Crie uma classe ContaBancaria com:
+
+Atributos privados: numeroConta, titular, saldo
+
+Construtor que define saldo inicial (não pode ser negativo)
+
+Métodos públicos:
+
+depositar(double valor) - não pode ser <= 0
+
+sacar(double valor) - não pode sacar mais que o saldo
+
+transferir(ContaBancaria destino, double valor) - com validações
+
+Getters para saldo (mas não pode ter setter direto)
+
+Teste: Crie 2 contas, faça depósitos, saques e transferências com validações.
