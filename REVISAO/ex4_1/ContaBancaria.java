@@ -9,9 +9,9 @@ public class ContaBancaria {
         this.id = id;
         this.titular = titular;
         this.saldo = saldo;
-        if(saldo < 0){
+        if(saldo < 0.1){
             System.out.println("O saldo da conta não pode ser negativo!");
-            saldo = 1.0;
+            this.saldo = 1.0;
             }
     }
 
