@@ -1,0 +1,10 @@
+EXERCÍCIO 3.2 - CARRO COM MOTOR (COMPOSIÇÃO)
+Crie:
+
+Classe Motor com atributos potencia e tipo (flex, diesel, etc.)
+
+Classe Carro com atributos modelo, cor e um objeto Motor
+
+Métodos em Carro: ligar(), desligar(), acelerar()
+
+Teste: Crie 2 carros com motores diferentes e simule acelerações.
