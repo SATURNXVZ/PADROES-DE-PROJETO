@@ -31,8 +31,8 @@ public class Carro {
             return 0;
         } else{
             System.out.println("Freando!");
-            System.out.printf("Velocidade atual: %.1f Km/h\n\n", km);
             km -= 20;
+            System.out.printf("Velocidade atual: %.1f Km/h\n\n", km);
         }
         return 0;
     }
