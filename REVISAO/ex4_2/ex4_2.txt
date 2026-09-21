@@ -1,0 +1,22 @@
+📌 EXERCÍCIO 4.2 - VALIDAÇÃO COM EXCEÇÕES
+Crie uma classe Pessoa com:
+
+Atributos privados: nome, idade, cpf
+
+Validações no construtor e setters:
+
+Nome: não pode ser vazio ou nulo
+
+Idade: entre 0 e 150
+
+CPF: deve ter formato "XXX.XXX.XXX-XX" (use validação simples)
+
+Crie exceções personalizadas:
+
+NomeInvalidoException
+
+IdadeInvalidaException
+
+CPFInvalidoException
+
+Teste: Tente criar pessoas com dados inválidos e trate as exceções.
