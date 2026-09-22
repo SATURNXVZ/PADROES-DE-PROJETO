@@ -1,0 +1,27 @@
+📌 EXERCÍCIO 5 - SISTEMA DE BIBLIOTECA (DESAFIO INTEGRADOR)
+Crie um sistema completo com:
+
+Classes:
+Livro: titulo, autor, ano, ISBN, disponivel (boolean)
+
+Usuario: nome, id, livrosEmprestados (List)
+
+Biblioteca: lista de livros e usuários
+
+Requisitos:
+Método para emprestarLivro(Usuario, Livro) — só se disponível
+
+Método para devolverLivro(Usuario, Livro)
+
+Método para buscarLivroPorTitulo(String) — retorna List
+
+Método para listarLivrosDisponiveis()
+
+Método para historicoEmprestimos(Usuario) — retorna lista de livros que ele já pegou
+
+Regras de negócio:
+Usuário não pode pegar mais de 3 livros
+
+Se o livro estiver emprestado, lance exceção
+
+Ao devolver, atualize disponibilidade
