@@ -4,7 +4,7 @@ Crie uma classe Pessoa com:
 Atributos privados: nome, idade, cpf
 
 Validações no construtor e setters:
-
+ 
 Nome: não pode ser vazio ou nulo
 
 Idade: entre 0 e 150
