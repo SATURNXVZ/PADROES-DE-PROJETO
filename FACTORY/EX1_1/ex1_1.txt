@@ -1,0 +1,13 @@
+BLOCO 1 — Factory Method (básico)
+Exercício 1 — Bebidas
+Crie um Factory Method para uma Cafeteria. Existem dois produtos: Cafe e Cha, ambos implementam Bebida com método preparar().
+
+Cafeteria é a classe abstrata com criarBebida() e um método servir() que cria e chama preparar().
+
+CafeteriaCafe e CafeteriaCha são as concretas.
+
+Uso esperado:
+
+java
+Cafeteria c = new CafeteriaCafe();
+c.servir(); // "Preparando café..."

@@ -1,0 +1,8 @@
+Exercício 2 — Documentos
+Um sistema gera Documentos. Existem PDF e Word, ambos com abrir().
+
+Editor é abstrato com criarDocumento() e editar().
+
+EditorPDF e EditorWord concretos.
+
+Desafio extra: adicione um terceiro tipo Excel sem alterar as classes existentes. (Isso é o ponto do Factory Method.)
