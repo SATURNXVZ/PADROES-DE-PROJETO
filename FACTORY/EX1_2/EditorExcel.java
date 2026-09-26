@@ -1,10 +1,9 @@
 package FACTORY.EX1_2;
 
-public class EditorWord extends Editor {
-     
+public class EditorExcel extends Editor {
+    
     @Override 
     public Documentos criarDocumento(){
-        return new Word();
+        return new Excel();
     }
-
 }

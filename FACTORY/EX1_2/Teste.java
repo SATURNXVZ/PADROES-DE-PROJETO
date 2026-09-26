@@ -2,7 +2,7 @@ package FACTORY.EX1_2;
 
 public class Teste {
     public static void main(String[] args) {
-        Editor e = new EditorWord();
+        Editor e = new EditorExcel();
         e.editar();
     }
-}
+} 

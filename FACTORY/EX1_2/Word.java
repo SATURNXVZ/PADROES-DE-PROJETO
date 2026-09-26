@@ -6,4 +6,4 @@ public class Word implements Documentos {
     public void abrir(){
         System.out.println("Abrindo documento WORD!");
     }
-}
+} 
