@@ -1,8 +1,7 @@
-package FACTORY.EX1_2;
 
 public class EditorExcel extends Editor {
     
-    @Override 
+    @Override  
     public Documentos criarDocumento(){
         return new Excel();
     }

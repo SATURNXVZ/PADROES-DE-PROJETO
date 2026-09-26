@@ -1,4 +1,4 @@
-package FACTORY.EX1_2;
+
 
 public class Word implements Documentos {
     
@@ -6,4 +6,4 @@ public class Word implements Documentos {
     public void abrir(){
         System.out.println("Abrindo documento WORD!");
     }
-} 
+}  
