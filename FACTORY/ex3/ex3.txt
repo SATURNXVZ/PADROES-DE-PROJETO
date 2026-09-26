@@ -1,0 +1,12 @@
+Exercício 3 — Personagens de RPG
+Existem Guerreiro e Mago, ambos Personagem com atacar().
+
+FabricaPersonagem (abstrata) tem criarPersonagem() e iniciarBatalha().
+
+Subclasses: FabricaGuerreiro, FabricaMago.
+
+Uso esperado:
+
+java
+FabricaPersonagem f = new FabricaMago();
+f.iniciarBatalha(); // cria mago e ataca
