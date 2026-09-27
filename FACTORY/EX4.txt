@@ -1,0 +1,23 @@
+
+Este código não é Factory Method:
+
+
+class BebidaFactory {
+    public static Bebida criar(String tipo) {
+        if (tipo.equals("cafe")) return new Cafe();
+        if (tipo.equals("cha"))  return new Cha();
+        return null;
+    }
+}
+
+
+Me responde em texto (sem código):
+
+Por que isso não é Factory Method?
+R: Pq no factory a ideia é nãu ter que usar IFs
+
+Que padrão é esse na verdade?
+R: If e else, mas pra ser mais direto, um metodo "construtor".
+
+O que falta pra virar Factory Method de verdade?
+R: eu não precisar passar como parametro se é cha ou cafe, e tirar os IFs.
