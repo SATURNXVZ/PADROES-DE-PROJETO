@@ -1,0 +1,18 @@
+Exercício 5 — Newsletter (básico)
+Um Blog publica posts. Assinantes recebem notificação quando sai post novo.
+
+Estrutura:
+
+Observer → update(String titulo)
+
+Subject → attach, detach, notifyObservers
+
+Blog → implementa Subject, tem publicar(String)
+
+AssinanteEmail, AssinanteSMS → implementam Observer
+
+Saída esperada:
+
+text
+Ana recebeu email: Factory Method explicado
+Bruno recebeu SMS: Factory Method explicado
