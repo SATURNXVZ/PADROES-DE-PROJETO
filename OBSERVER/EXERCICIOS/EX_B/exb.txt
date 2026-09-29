@@ -1,0 +1,21 @@
+Exercício B — Carrinho de Compras (básico, 10 min)
+Um Carrinho tem uma lista de itens e um total. Quando um item é adicionado, EmailConfirmacao e LogSistema são notificados.
+
+Estrutura
+Observer → update(String mensagem)
+
+Carrinho → implementa Subject, tem adicionarItem(String nome, double preco)
+
+EmailConfirmacao → imprime "Email: item X adicionado"
+
+LogSistema → imprime "[LOG] X adicionado"
+
+Saída esperada
+java
+Carrinho c = new Carrinho();
+c.attach(new EmailConfirmacao());
+c.attach(new LogSistema());
+c.adicionarItem("Notebook", 3500.0);
+
+// Email: item Notebook adicionado
+// [LOG] Notebook adicionado

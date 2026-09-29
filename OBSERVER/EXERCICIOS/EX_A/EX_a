@@ -1,0 +1,23 @@
+Exercício A — Termômetro (básico, 8 min)
+Um Termometro guarda a temperatura atual. Dois displays (DisplayCelsius e DisplayFahrenheit) querem ser avisados quando a temperatura muda.
+
+Estrutura
+Observer → update(double temperatura)
+
+Subject → attach, detach, notifyObservers
+
+Termometro → implementa Subject, tem setTemperatura(double)
+
+DisplayCelsius → imprime "X°C"
+
+DisplayFahrenheit → converte e imprime "Y°F" (fórmula: C * 1.8 + 32)
+
+Saída esperada
+java
+Termometro t = new Termometro();
+t.attach(new DisplayCelsius());
+t.attach(new DisplayFahrenheit());
+t.setTemperatura(25.0);
+
+// Celsius: 25.0°C
+// Fahrenheit: 77.0°F
