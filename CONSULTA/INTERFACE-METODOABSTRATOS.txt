@@ -1,0 +1,37 @@
+Interface e Métodos Abstratos
+java
+// Interface: só contrato (Java 8+ pode ter default)
+interface Veiculo {
+    void acelerar();                    // abstrato implícito
+    void frear();
+    default void buzinar() {            // opcional
+        System.out.println("Bibi!");
+    }
+}
+
+// Classe abstrata: pode ter código comum
+abstract class VeiculoBase {
+    protected String marca;
+    
+    public VeiculoBase(String marca) { this.marca = marca; }
+    
+    public abstract void acelerar();    // subclasse implementa
+    public void ligar() {               // código comum
+        System.out.println(marca + " ligado");
+    }
+}
+
+// Implementação
+class Carro extends VeiculoBase implements Veiculo {
+    public Carro(String marca) { super(marca); }
+    public void acelerar() { System.out.println("Carro acelerando"); }
+    public void frear() { System.out.println("Carro freando"); }
+}
+Diferença crucial:
+
+                    Interface	                            Classe Abstrata
+Métodos	            Só abstratos (ou default)	            Abstratos + concretos
+Atributos	        Só constantes (static final)	        Qualquer tipo
+Construtor	        Não tem	                                Tem
+Herança múltipla	Sim (várias interfaces)	                Não (só uma classe)
+Quando usar	        Contrato puro	                        Código comum entre filhas

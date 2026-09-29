@@ -1,0 +1,70 @@
+Mistura Factory + Observer (pode cair!)
+java
+import java.util.ArrayList;
+import java.util.List;
+
+// Factory Method para criar notificadores
+interface Notificador {
+    void enviar(String msg);
+}
+class Email implements Notificador {
+    public void enviar(String msg) { System.out.println("Email: " + msg); }
+}
+class SMS implements Notificador {
+    public void enviar(String msg) { System.out.println("SMS: " + msg); }
+}
+
+abstract class FabricaNotificador {
+    public abstract Notificador criar();
+}
+class FabricaEmail extends FabricaNotificador {
+    public Notificador criar() { return new Email(); }
+}
+class FabricaSMS extends FabricaNotificador {
+    public Notificador criar() { return new SMS(); }
+}
+
+// Observer
+interface Observer {
+    void update(String msg);
+}
+
+// Subject
+class Loja {
+    private List<Observer> clientes = new ArrayList<>();
+    
+    public void attach(Observer o) { clientes.add(o); }
+    public void notifyObservers(String msg) {
+        for (Observer o : clientes) o.update(msg);
+    }
+    
+    public void fazerPedido(String produto) {
+        notifyObservers("Novo pedido: " + produto);
+    }
+}
+
+// Cliente que é Observer e usa Factory
+class Cliente implements Observer {
+    private String nome;
+    private FabricaNotificador fabrica;
+    
+    public Cliente(String nome, FabricaNotificador fabrica) {
+        this.nome = nome;
+        this.fabrica = fabrica;
+    }
+    
+    public void update(String msg) {
+        Notificador n = fabrica.criar();   // Factory Method
+        n.enviar(nome + " -> " + msg);
+    }
+}
+
+// Main
+public class Main {
+    public static void main(String[] args) {
+        Loja loja = new Loja();
+        loja.attach(new Cliente("Ana", new FabricaEmail()));
+        loja.attach(new Cliente("Beto", new FabricaSMS()));
+        loja.fazerPedido("Notebook");
+    }
+}

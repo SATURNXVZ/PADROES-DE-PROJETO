@@ -1,0 +1,12 @@
+I — Interface Segregation (interfaces específicas, não gordas)
+java
+// ❌ Ruim: interface gorda
+interface Trabalhador {
+    void trabalhar();
+    void comer();
+    void dormir();
+}
+
+// ✅ Bom: interfaces separadas
+interface Trabalhador { void trabalhar(); }
+interface Alimentavel { void comer(); }

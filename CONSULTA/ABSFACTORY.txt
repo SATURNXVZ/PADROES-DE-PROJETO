@@ -1,0 +1,59 @@
+Abstract Factory
+Diferença do Factory Method: aqui você cria famílias de produtos relacionados.
+
+java
+// 1. Produtos da família
+interface Botao { void render(); }
+interface Janela { void abrir(); }
+
+// 2. Produtos concretos (família Windows)
+class BotaoWindows implements Botao {
+    public void render() { System.out.println("Botão Windows"); }
+}
+class JanelaWindows implements Janela {
+    public void abrir() { System.out.println("Janela Windows"); }
+}
+
+// 3. Produtos concretos (família Mac)
+class BotaoMac implements Botao {
+    public void render() { System.out.println("Botão Mac"); }
+}
+class JanelaMac implements Janela {
+    public void abrir() { System.out.println("Janela Mac"); }
+}
+
+// 4. Abstract Factory (interface que cria a família)
+interface FabricaGUI {
+    Botao criarBotao();
+    Janela criarJanela();
+}
+
+// 5. Fábricas concretas
+class FabricaWindows implements FabricaGUI {
+    public Botao criarBotao() { return new BotaoWindows(); }
+    public Janela criarJanela() { return new JanelaWindows(); }
+}
+class FabricaMac implements FabricaGUI {
+    public Botao criarBotao() { return new BotaoMac(); }
+    public Janela criarJanela() { return new JanelaMac(); }
+}
+
+// 6. Cliente
+public class Main {
+    public static void main(String[] args) {
+        FabricaGUI fabrica = new FabricaWindows();
+        Botao b = fabrica.criarBotao();
+        Janela j = fabrica.criarJanela();
+        b.render();   // Botão Windows
+        j.abrir();    // Janela Windows
+    }
+}
+
+
+Diferença crucial:
+
+            Factory Method	                Abstract Factory
+Cria	    Um produto	                    Família de produtos
+Estrutura	Herança (subclasse decide)	    Composição (interface cria vários)
+Métodos	    1 método fábrica	            Vários métodos fábrica
+Exemplo	    Criar 1 tipo de Botão	        Criar Botão + Janela + Menu da mesma família

@@ -1,0 +1,9 @@
+L — Liskov Substitution (subclasse substitui a pai sem quebrar)
+java
+// ❌ Ruim: Pinguim não voa, mas herda de Ave
+class Ave { void voar() {} }
+class Pinguim extends Ave { void voar() { throw new RuntimeException(); } }
+
+// ✅ Bom: separa interfaces
+interface Ave { void comer(); }
+interface AveVoadora extends Ave { void voar(); }

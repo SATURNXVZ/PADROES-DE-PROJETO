@@ -1,0 +1,15 @@
+O — Open/Closed (aberto pra extensão, fechado pra modificação)
+java
+// ❌ Ruim: pra adicionar desconto, mexe na classe
+class Calculadora {
+    double calcular(String tipo) {
+        if (tipo.equals("VIP")) return 0.9;
+        if (tipo.equals("NORMAL")) return 1.0;
+        return 1.0;
+    }
+}
+
+// ✅ Bom: interface + implementações
+interface Desconto { double aplicar(double valor); }
+class DescontoVIP implements Desconto { public double aplicar(double v) { return v * 0.9; } }
+class DescontoNormal implements Desconto { public double aplicar(double v) { return v; } }

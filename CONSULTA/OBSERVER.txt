@@ -1,0 +1,71 @@
+Observer
+Molde (decora isso):
+
+java
+import java.util.ArrayList;
+import java.util.List;
+
+// 1. Observer
+interface Observer {
+    void update(String dado);
+}
+
+// 2. Subject
+interface Subject {
+    void attach(Observer o);
+    void detach(Observer o);
+    void notifyObservers();
+}
+
+// 3. ConcreteSubject
+class Sujeito implements Subject {
+    private List<Observer> observers = new ArrayList<>();
+    private String dadoAtual;
+    
+    public void attach(Observer o) { observers.add(o); }
+    public void detach(Observer o) { observers.remove(o); }
+    
+    public void notifyObservers() {
+        for (Observer o : observers) {
+            o.update(dadoAtual);
+        }
+    }
+    
+    public void mudar(String novoDado) {
+        this.dadoAtual = novoDado;   // GUARDA PRIMEIRO
+        notifyObservers();           // AVISA DEPOIS
+    }
+}
+
+// 4. ConcreteObservers
+class ObservadorA implements Observer {
+    public void update(String dado) {
+        System.out.println("A recebeu: " + dado);
+    }
+}
+class ObservadorB implements Observer {
+    public void update(String dado) {
+        System.out.println("B recebeu: " + dado);
+    }
+}
+
+// 5. Cliente
+public class Main {
+    public static void main(String[] args) {
+        Sujeito s = new Sujeito();
+        s.attach(new ObservadorA());
+        s.attach(new ObservadorB());
+        s.mudar("Olá!");
+        // A recebeu: Olá!
+        // B recebeu: Olá!
+    }
+}
+Características:
+
+Subject guarda List<Observer>
+
+notifyObservers() percorre a lista chamando update
+
+Sempre guardar o dado ANTES de notificar
+
+Observer pode ser Push (recebe dado) ou Pull (recebe o Subject)

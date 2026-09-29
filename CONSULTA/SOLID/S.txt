@@ -1,0 +1,16 @@
+SOLID (resumo rápido)
+Os 5 princípios, com exemplo de violação vs correção:
+
+S — Single Responsibility (uma classe, uma responsabilidade)
+java
+// ❌ Ruim: classe faz tudo
+class Pedido {
+    void calcularTotal() {}
+    void salvarNoBanco() {}
+    void enviarEmail() {}
+}
+
+// ✅ Bom: separa responsabilidades
+class Pedido { void calcularTotal() {} }
+class PedidoRepository { void salvar(Pedido p) {} }
+class EmailService { void enviar(String para) {} }

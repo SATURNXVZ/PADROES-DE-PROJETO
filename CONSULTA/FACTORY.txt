@@ -1,0 +1,51 @@
+Factory Method
+Molde (decora isso):
+
+java
+// 1. Produto
+interface Produto {
+    void usar();
+}
+
+// 2. Produtos concretos
+class ProdutoA implements Produto {
+    public void usar() { System.out.println("Usando A"); }
+}
+class ProdutoB implements Produto {
+    public void usar() { System.out.println("Usando B"); }
+}
+
+// 3. Criador abstrato
+abstract class Criador {
+    public abstract Produto criar();   // FACTORY METHOD
+    
+    public void processar() {          // template que usa o produto
+        Produto p = criar();
+        p.usar();
+    }
+}
+
+// 4. Criadores concretos
+class CriadorA extends Criador {
+    public Produto criar() { return new ProdutoA(); }
+}
+class CriadorB extends Criador {
+    public Produto criar() { return new ProdutoB(); }
+}
+
+// 5. Cliente
+public class Main {
+    public static void main(String[] args) {
+        Criador c = new CriadorA();
+        c.processar();   // Usando A
+    }
+}
+Características:
+
+Método criar() abstrato na superclasse
+
+Subclasses decidem qual produto instanciar
+
+Cliente nunca faz new ProdutoA() direto
+
+Adicionar produto novo = nova classe, sem mexer nas existentes (Open/Closed)

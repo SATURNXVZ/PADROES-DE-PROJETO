@@ -1,0 +1,13 @@
+D — Dependency Inversion (dependa de abstração, não de concreto)
+java
+// ❌ Ruim: depende de classe concreta
+class Servico {
+    MySQLBanco banco = new MySQLBanco();
+}
+
+// ✅ Bom: depende de interface
+interface Banco { void salvar(); }
+class Servico {
+    private Banco banco;
+    public Servico(Banco b) { this.banco = b; }
+}

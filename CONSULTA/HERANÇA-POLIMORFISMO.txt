@@ -1,0 +1,55 @@
+HERANÇA E POLIMORFISMO
+
+// Classe base
+abstract class Animal {
+    protected String nome;
+    
+    public Animal(String nome) { this.nome = nome; }
+    
+    public abstract void emitirSom();   // polimórfico
+    
+    public void dormir() {
+        System.out.println(nome + " está dormindo");
+    }
+}
+
+// Subclasses
+class Cachorro extends Animal {
+    public Cachorro(String nome) { super(nome); }
+    @Override
+    public void emitirSom() { System.out.println(nome + ": Au au!"); }
+}
+
+class Gato extends Animal {
+    public Gato(String nome) { super(nome); }
+    @Override
+    public void emitirSom() { System.out.println(nome + ": Miau!"); }
+}
+
+// Polimorfismo em ação
+public class Main {
+    public static void main(String[] args) {
+        Animal a1 = new Cachorro("Rex");
+        Animal a2 = new Gato("Mimi");
+        
+        a1.emitirSom();   // Au au!
+        a2.emitirSom();   // Miau!
+        
+        // Lista polimórfica
+        Animal[] animais = { a1, a2 };
+        for (Animal a : animais) {
+            a.emitirSom();   // chama o método da subclasse
+        }
+    }
+}
+Pontos-chave:
+
+abstract na classe = não pode instanciar direto
+
+abstract no método = subclasse obrigada a sobrescrever
+
+@Override = sobrescreve método da superclasse
+
+super(...) = chama construtor da superclasse
+
+Polimorfismo = mesma chamada, comportamentos diferentes
